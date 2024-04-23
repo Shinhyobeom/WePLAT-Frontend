@@ -1,0 +1,85 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:639122009176:task-definition/weplat-ap2-front-task-1:5",
+    "containerDefinitions": [
+        {
+            "name": "weplat-front",
+            "image": "639122009176.dkr.ecr.ap-northeast-2.amazonaws.com/weplat-frontend:web",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "web-80",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/weplat-ap2-front-task-1",
+                    "awslogs-region": "ap-northeast-2",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        }
+    ],
+    "family": "weplat-ap2-front-task-1",
+    "executionRoleArn": "arn:aws:iam::639122009176:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 5,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2024-04-23T00:35:36.626Z",
+    "registeredBy": "arn:aws:iam::639122009176:user/weplat_btc_user4",
+    "tags": []
+}
