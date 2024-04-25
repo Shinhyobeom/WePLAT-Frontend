@@ -55,6 +55,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: weplat-ap2-ecs-front-service
+          service: weplat-ap2-front-service
           cluster: weplat-ap2-ecs-cluster
           wait-for-service-stability: true
