@@ -36,7 +36,7 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: 639122009176.dkr.ecr.ap-northeast-2.amazonaws.com
-          ECR_REPOSITORY: weplat-frontend
+          ECR_REPOSITORY: weplat-ap2-frontend
           IMAGE_TAG: web
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
