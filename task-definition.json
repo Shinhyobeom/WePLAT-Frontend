@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "weplat-front",
-            "image": "639122009176.dkr.ecr.ap-northeast-2.amazonaws.com/weplat-frontend:web",
+            "image": "639122009176.dkr.ecr.ap-northeast-2.amazonaws.com/weplat-ap2-frontend:web",
             "cpu": 0,
             "portMappings": [
                 {
