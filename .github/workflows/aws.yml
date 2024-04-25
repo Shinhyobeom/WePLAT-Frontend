@@ -1,3 +1,4 @@
+#cd/cd
 name: Deploy to Amazon ECS
 
 on:
