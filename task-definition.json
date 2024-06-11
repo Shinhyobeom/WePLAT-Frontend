@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:639122009176:task-definition/weplat-ap2-front-task-1:5",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:639122009176:task-definition/weplat-ap2-front-task-1:18",
     "containerDefinitions": [
         {
             "name": "weplat-front",
-            "image": "639122009176.dkr.ecr.ap-northeast-2.amazonaws.com/weplat-ap2-frontend:web",
+            "image": "639122009176.dkr.ecr.ap-northeast-2.amazonaws.com/weplat-frontend:web",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,19 +16,16 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-create-group": "true",
                     "awslogs-group": "/ecs/weplat-ap2-front-task-1",
+                    "awslogs-create-group": "true",
                     "awslogs-region": "ap-northeast-2",
                     "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
+                }
             },
             "systemControls": []
         }
@@ -36,7 +33,7 @@
     "family": "weplat-ap2-front-task-1",
     "executionRoleArn": "arn:aws:iam::639122009176:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 5,
+    "revision": 18,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -75,11 +72,7 @@
     ],
     "cpu": "512",
     "memory": "1024",
-    "runtimePlatform": {
-        "cpuArchitecture": "X86_64",
-        "operatingSystemFamily": "LINUX"
-    },
-    "registeredAt": "2024-04-23T00:35:36.626Z",
-    "registeredBy": "arn:aws:iam::639122009176:user/weplat_btc_user4",
+    "registeredAt": "2024-06-11T02:43:58.332Z",
+    "registeredBy": "arn:aws:iam::639122009176:user/weplat_btc_user1",
     "tags": []
 }
