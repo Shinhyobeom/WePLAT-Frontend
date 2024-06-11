@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     // applicant backend Data
-    const resumeApiConfig = new ResumeConfiguration({ basePath: "https://applicant.hyobeom.shop" }); // https://app.weplat.shop
+    const resumeApiConfig = new ResumeConfiguration({ basePath: "https://applicant.weplat.store" }); // https://app.weplat.shop
     const resumeApi = ResumeResourceApiFactory(resumeApiConfig);
     resumeApi.getAllResumes(0, 10).then(async (res) => {
       const { data } = await resumeApi.getResume(1);
@@ -25,7 +25,7 @@ function App() {
     });
 
     // job backend Data
-    const jobPostingApiConfig = new JobPostingConfiguration({ basePath: "https://jobposting.hyobeom.shop" }); // https://job.weplat.shop
+    const jobPostingApiConfig = new JobPostingConfiguration({ basePath: "https://jobposting.weplat.store" }); // https://job.weplat.shop
     const jobPostingApi = JobPostingResourceApiFactory(jobPostingApiConfig);
     jobPostingApi.getAllJobPostings(0, 10).then(async (res) => {
       const { data } = await jobPostingApi.getJobPosting(1);
